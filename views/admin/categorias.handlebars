@@ -1,0 +1,37 @@
+<h2>Lista de categorias</h2>
+<hr>
+<a href="/admin/categorias/add"><button class="btn btn-success">Nova Categoria</button></a>
+
+{{#each categorias}}    {{! Estrutura de repetição para mostrar as categorias, em que 'categorias' é uma variavel externa para mostrar o nome e o slug}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4>{{nome}}</h4>   {{! Vem da rota: /categorias que passa o array categoria como parametro para usar nesse arquivo e exibir os nomes das categorias}}
+
+            {{!
+            EXPLICAÇÃO DO CHAT GPT: 
+
+            Passa para o template admin/categorias através do objeto res.render('admin/categorias', {categorias: categorias}). 
+            Isso significa que, dentro do template admin/categorias, a variável categorias estará disponível e será utilizada dentro do {{#each categorias} }
+            para iterar sobre a lista e exibir cada categoria.
+            }}
+            
+            <small>Slug: {{slug}}</small><br>
+            <small>Data de criação: {{date}}</small><br>
+            <a href="/admin/categorias/edit/{{_id}}"><button class="btn btn-success mt-4">Editar Categoria</button></a>
+
+            {{! Vai para a pagina: /admin/categorias/edit/ passando o id da categoria como parametro}}
+            
+            <form action="/admin/categorias/deletar" method="post"> {{! Envia o formulario para: /admin/categorias/deletar}}
+
+                <input type="hidden" name="id" value="{{_id}}"> {{! Esse campo input de tipo hidden é usado para armazenar o ID da categoria que será deletada.}}
+                
+                {{! O valor {{_id} } é o ID da categoria atual no loop de iteração. Quando o formulário é enviado, esse ID é enviado ao servidor, 
+                onde será utilizado para identificar qual categoria deve ser deletada}}
+                
+                <button type="submit" class="btn btn-danger mt-2">Deletar Categoria</button>
+            </form>
+        </div>
+    </div>
+{{else}}
+    <h4 class="mt-3">Nenhuma Categoria Registrada</h4>
+{{/each}}

@@ -1,0 +1,36 @@
+{{#each erros}} {{! <- Estrutura de repetição, para exibir os erros, se existir}}
+    <div class="alert alert-danger">{{texto}}</div>
+{{else}}
+
+{{/each}}
+
+{{! Formulário para adicionar uma nova categoria}}
+
+<div class="card">
+    <div class="card-body">
+        <h4>Nova Postagem: </h4>
+        <form action="/admin/postagens/nova" method="POST"> {{! O formulario é enviado para: /admin/postagens/nova}}
+            <label for="titulo">Titulo: </label>
+                <input type="text" name="titulo" class="form-control" required>
+            <label for="slug">Slug: </label>
+                <input type="text" name="slug" class="form-control" required>
+            <label for="descricao">Descrição: </label>
+                <input type="text" name="descricao" class="form-control" required>
+            <label for="conteudo">Conteúdo: </label>
+                <textarea name="conteudo" class="form-control" required></textarea>
+            <label for="categoria">Categoria: </label>
+                <select name="categoria" class="form-select">
+                    {{#each categorias}}    
+
+                    {{! Estrutura de repetição passando a variavel categorias}}
+                    {{! Mostra todas as opções de categorias, que podem ser usadas para criar uma nova postagem}}
+                    
+                        <option value="{{_id}}">{{nome}}</option>
+                    {{else}}
+                        <option value="0">Nenhuma categoria registrada</option>
+                    {{/each}}
+                </select>
+                <button class="btn btn-success mt-4" type="submit">Criar Postagem</button>
+        </form>
+    </div>
+</div>
