@@ -1,5 +1,5 @@
 <div align="center">
-# <h1 align="center">  Sistema de Blog 🧑‍💻 </h1>
+<h1 align="center">  Sistema de Blog 🧑‍💻 </h1>
 
 ## Sobre o projeto 🔍
 
