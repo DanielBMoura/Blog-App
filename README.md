@@ -1,10 +1,10 @@
+<div align="center">
 # <h1 align="center">  Sistema de Blog 🧑‍💻 </h1>
 
 ## Sobre o projeto 🔍
 
 <p align="center">
-O projeto consiste em um Sistema de Blog, que oferece uma interface responsiva para leitura de postagens e suas categorias. Os usuários podem se cadastrar e autenticar no sistema para manter uma melhor organização.
-Além disso, possui uma página administrativa onde o administrador pode realizar um CRUD (Criar, Ler, Atualizar, Deletar) para gerenciar postagens e categorias.
+O projeto consiste em um Sistema de Blog, que oferece uma interface responsiva para leitura de postagens e suas categorias. Os usuários podem se cadastrar e autenticar no sistema para manter uma melhor organização. Além disso, possui uma página administrativa onde o administrador pode realizar um CRUD (Criar, Ler, Atualizar, Deletar) para gerenciar postagens e categorias.
 </p>
 
 ## Funcionalidades ✨
@@ -14,12 +14,12 @@ Além disso, possui uma página administrativa onde o administrador pode realiza
 
 ## Tecnologias Utilizadas 💻
 
-- <strong>Node.js</strong>: Ambiente de execução JavaScript no servidor.
-- <strong>MySQL</strong>: Banco de dados relacional para armazenar informações.
-- <strong>Express.js</strong>: Framework para criação de rotas e API.
-- <strong>JavaScript</strong>: Linguagem principal utilizada no projeto.
-- <strong>HTML</strong>: Estruturação da interface do usuário.
-- <strong>CSS</strong>: Estilização e responsividade da aplicação.
+**Node.js**: Ambiente de execução JavaScript no servidor.  
+**MongoDB**: Banco de dados não relacional utilizado para guardar as categorias e postagens registradas.  
+**Express.js**:  Framework Node.js utilizado para criar rotas no sistema.  
+**JavaScript**: Linguagem principal utilizada no projeto.  
+**Bootstrap**: Framework CSS utilizado para estilizar a interface e fornecer componentes responsivos.  
+**Handlebars**: Motor de templates utilizado para gerar páginas dinâmicas no projeto.  
 
 ## Como clonar o repositório 📋
 
@@ -47,3 +47,4 @@ node index.js
 
 📜 **Licença:** MIT
 
+ </div>
