@@ -37,14 +37,19 @@ git clone https://github.com/DanielBMoura/Blog-App.git
 
 ## Inicializando o servidor 🚀
 
-No MySQL, crie o banco de dados: "dbtcc":
+No CMD inicie o MongoDB:
 ```bash
-create database dbtcc;
+mongod
+```
+
+Acesse o shell do MongoDB:
+```bash
+mongosh
 ```
 
 No terminal do Visual Studio Code:
 ```
-node index.js
+node app.js
 ```
 
 ## Considerações finais 📝
