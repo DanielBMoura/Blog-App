@@ -9,16 +9,22 @@ O projeto consiste em um Sistema de Blog, que oferece uma interface responsiva p
 
 ## Funcionalidades ✨
 
-- 📊 **Área Administrativa**: Possui um painel para gerenciar as categorias e postagens com operações de **CRUD**.
-- 🔒 **Autenticação de Usuário**: Permite o cadastro e login seguro.
+📊 **Área Administrativa**: Possui um painel para gerenciar as categorias e postagens com operações de **CRUD**.  
+
+🔒 **Autenticação de Usuário**: Permite o cadastro e login seguro.
 
 ## Tecnologias Utilizadas 💻
 
 **Node.js**: Ambiente de execução JavaScript no servidor.  
-**MongoDB**: Banco de dados não relacional utilizado para guardar as categorias e postagens registradas.  
+
+**MongoDB**: Banco de dados não relacional utilizado para guardar dados sobrecategorias e postagens registradas.  
+
 **Express.js**:  Framework Node.js utilizado para criar rotas no sistema.  
+
 **JavaScript**: Linguagem principal utilizada no projeto.  
+
 **Bootstrap**: Framework CSS utilizado para estilizar a interface e fornecer componentes responsivos.  
+
 **Handlebars**: Motor de templates utilizado para gerar páginas dinâmicas no projeto.  
 
 ## Como clonar o repositório 📋
