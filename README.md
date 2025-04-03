@@ -32,7 +32,7 @@ O projeto consiste em um Sistema de Blog, que oferece uma interface responsiva p
 Para clonar o repositório, execute o seguinte comando:
 
 ```bash
-git clone https://github.com/DanielBMoura/Sistema-de-Login.git
+git clone https://github.com/DanielBMoura/Blog-App.git
 ```
 
 ## Inicializando o servidor 🚀
