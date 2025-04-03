@@ -42,7 +42,7 @@ No CMD inicie o MongoDB:
 mongod
 ```
 
-Acesse o shell do MongoDB:
+Em outro terminal, acesse o shell do MongoDB:
 ```bash
 mongosh
 ```
