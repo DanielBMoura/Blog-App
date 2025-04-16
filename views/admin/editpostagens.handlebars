@@ -1,0 +1,36 @@
+{{#each erros}}     {{! Também mostra os erros que podem vir a aparecer}}
+    <div class="alert alert-danger">{{texto}}</div>
+{{else}}
+
+{{/each}}
+<div class="card">
+    <div class="card-body">
+        <h4>Editar Postagem: </h4>
+        <form action="/admin/postagem/edit" method="POST">  {{! Manda o formulário novamente para: /admin/postagem/edit que fica no arquivo admin.js}}
+            
+            {{! Tudo relacionado a postagem.algumacoisa, é porque na rota que carrega essa página (/postagens/edit/:id), ao achar a postagem pelo id,
+                ele passa ela como objeto, para ser manipulado aqui.
+                Dessa forma, ele preenche o campo 'value' com os seus valores já preenchidos 
+            }}
+
+            <input type="hidden" value="{{postagem._id}}" name="id">    {{! Carrega o valor do id da postagem, que irá ser enviado junto com o formulário}}
+            <label for="titulo">Titulo: </label>
+                <input type="text" name="titulo" class="form-control" value="{{postagem.titulo}}" required> 
+            <label for="slug">Slug: </label>
+                <input type="text" name="slug" class="form-control" value="{{postagem.slug}}" required>
+            <label for="descricao">Descrição: </label>
+                <input type="text" name="descricao" class="form-control" value="{{postagem.descricao}}" required>
+            <label for="conteudo">Conteúdo: </label>
+                <textarea name="conteudo" class="form-control" required>{{postagem.conteudo}}</textarea>
+            <label for="categoria">Categoria: </label>
+                <select name="categoria" class="form-select">
+                    {{#each categorias}}    {{! Mostra todas as categorias registradas, e que podem ser usadas na postagem}}
+                        <option value="{{_id}}">{{nome}}</option>
+                    {{else}}
+                        <option value="0">Nenhuma categoria registrada</option>
+                    {{/each}}
+                </select>
+                <button class="btn btn-success mt-4" type="submit">Editar Postagem</button>
+        </form>
+    </div>
+</div>

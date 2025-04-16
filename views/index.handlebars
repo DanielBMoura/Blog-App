@@ -1,0 +1,27 @@
+<div class="bg-light p-5 rounded-lg m-3"> {{! É uma mensagem de boas vindas, apenas estetica}}
+  <h1 class="display-4">Bem vindo ao Blog do Node</h1>
+  <p class="lead">Este é um BLOG simples, desenvolvido em Node.js + Express + MongoDB</p>
+  <hr class="my-4">
+  <p>Aqui você pode ler sobre as novidades do mundo da computação</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/usuarios/registro" role="button">Crie uma conta</a> {{! Botão que vai levar o usuario a uma página de registro}}
+  </p>
+</div>
+<hr>
+<h2>Postagens recentes: </h2>
+
+{{#each postagens}} {{! Estrutura de repetição passando o objeto de postagens, para ser manipulado}}
+  <div class="card mt-4">
+    <div class="card-body">
+      <h3>{{titulo}}</h3>
+      <p>{{descricao}}</p>
+      <a href="/postagem/{{slug}}"><button class="btn btn-success">Leia mais</button></a> {{! Botão que leva o usuario a uma página mostrando a publição, 
+      passando o slug como parametro na URL}}
+      <hr>
+      <small>Categoria: {{categoria.nome}}</small><br>  {{! <- Como passou o objeto para cá, ele também pode ser usado nesse arquivo, mas de uma forma diferente}}
+      <small>Data de publicação: {{data}}</small>
+    </div>
+  </div>
+{{else}}  {{! Else se caso não tenha nenhuma postagem}}
+  <h5>Nenhuma postagem</h5>
+{{/each}}

@@ -1,0 +1,31 @@
+{{! Layout principal de todas as paginas handlebars, carregando todos os outros arquivos}}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.css">   {{! Carrega o css do bootstrap}}
+    <title>Blog NodeJS</title>
+</head>
+<body>
+    {{#if isAdm}}
+        {{> _navbar_adm }}
+    {{else}}
+        {{> _navbar }}
+    {{/if}}
+    <div class="container mt-4">
+        {{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+        {{else}}
+
+        {{/if}}
+        {{>_msg}}   {{! Carrega a partials de mensagem, fazendo com que todas as páginas se precisarem, possam usar as partials de mensagens, seja de sucesso ou erro}}
+        {{{body}}}  {{! Carrega o conteúdo de toas as páginas}}
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+{{! Carregam bibliotecas externas para o funcionamento do bootstrap}}
+
+<script src="/js/bootstrap.js"></script>    {{! Carrega o javascript do bootstrap}}
+</html>

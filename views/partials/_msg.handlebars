@@ -1,0 +1,11 @@
+{{! Esse arquivo aparecerá em todas as paginas}}
+
+{{! Se precisar uma mensagem de sucesso, ele carregará o conteudo dentro desse if}}
+{{#if success_msg}}
+    <div class="alert alert-success">{{success_msg}}</div>  {{! Carrega o success_msg, para que a mensagem apareça na tela}}
+{{/if}}
+
+{{! Se precisar uma mensagem de erro, ele carregará o conteudo dentro desse if}}
+{{#if error_msg}}
+    <div class="alert alert-danger">{{error_msg}}</div>     {{! Carrega o error_msg, para que a mensagem apareça na tela}}
+{{/if}}

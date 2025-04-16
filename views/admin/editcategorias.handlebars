@@ -1,0 +1,25 @@
+{{#each erros}} {{! Estrutura de repetição para mostrar os erros, se existirem (mesmo que o anterior, passando 'erros' como variavel)}}
+    <div class="alert alert-danger">{{texto}}</div>
+{{else}}
+
+{{/each}}
+<h3>Editar Categoria</h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/admin/categorias/edit" method="POST">    {{! Envia o formulario para: /admin/categorias/edit}}
+            <input type="hidden" name="id" value="{{categoria._id}}">   {{! Carrega o id do objeto acessado, e éenviado junto com o formulário}}
+            <label for="nome">Nome: </label>
+                <input type="text" id="nome" name="nome" placeholder="Nome da Categoria" class="form-control" value="{{categoria.nome}}">
+
+                {{! Carrega  nome do objeto acessado}}
+            <label for="slug">Slug:</label>
+
+                <input type="text" id="slug" name="slug" placeholder="Slug da categoria" class="form-control" value="{{categoria.slug}}">
+
+                {{! Carrega o slug do objeto acessado}}
+                
+                <br>
+            <button type="submit" class="btn btn-success">Editar Categoria</button>
+        </form>
+    </div>
+</div>
